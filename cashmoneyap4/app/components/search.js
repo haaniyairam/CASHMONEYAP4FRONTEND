@@ -4,11 +4,12 @@ import Image from "next/image"
 import logo from "../../public/chatgpt.png"
 import sicon from "../../public/search.png"
 import { useState } from "react"
+import { useRouter } from 'next/navigation'
 
 export default function Search(){
 
       const [show, setShow] = useState("hidden")
-
+      const router = useRouter()
     return(
       <>
             
@@ -19,7 +20,7 @@ export default function Search(){
         <div className=" xl:-mt-10 md:mb-14 flex justify-center">            
           <input className="z-10 outline-none text-lg px-4 lg:px-6 text-white md:text-2xl xl:text-4xl font-Roboto rounded-l-full h-12 w-60 lg:w-[900px] xl:h-20 xl:w-[1200px] bg-[#940242]">
           </input>
-            <button className="z-10 outline-none text-lg px-4 lg:px-6 text-white md:text-2xl xl:text-4xl font-Roboto rounded-r-full h-12 w-20 lg:w-[100px] xl:h-20 xl:w-[200px] bg-[#940242]">
+            <button onClick={()=>router.push('/itemlist')} className="z-10 outline-none text-lg px-4 lg:px-6 text-white md:text-2xl xl:text-4xl font-Roboto rounded-r-full h-12 w-20 lg:w-[100px] xl:h-20 xl:w-[200px] bg-[#940242]">
                 <Image className="w-6 ml-6 xl:w-12 xl:ml-16" src={sicon}></Image>
             </button>
 
@@ -65,7 +66,7 @@ export default function Search(){
                               <h1 onClick={()=>{setShow("hidden")}} className="xl:text-xl font-bold text-black hover:scale-125"> X </h1>
                        </div>
                         
-                        <h1 className="text-black font-Cinz xl:ml-16 xl:text-3xl text-xl ml-4 mt-6 font-bold "> Enter Your Prompt Here:</h1>
+                        <h1 className="text-black font-Cinz xl:ml-16 xl:text-3xl text-xl ml-4 mt-6 font-bold "> What is......</h1>
 
                        <div className="flex flex-col justify-center items-center">
                                     <input className=" bg-[#e7e8e2] border rounded-full px-4 border-black xl:w-[1300px] mt-4 w-72 h-14">
