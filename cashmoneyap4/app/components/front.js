@@ -2,7 +2,7 @@ import "../globals.css"
 
 export default function Front(){
     return(
-        <div className=" mx-8 my-8 md:mx-28 md:my-32 ">
+        <div className=" xl:mt-12 mx-8 my-8 md:mx-28 md:my-32 ">
             <div className="relative z-10">
                 <div className="flex">
         <h1 className=" font-bold font-Cinz md:text-5xl xl:text-7xl text-[#940242]">Welcome to</h1>
