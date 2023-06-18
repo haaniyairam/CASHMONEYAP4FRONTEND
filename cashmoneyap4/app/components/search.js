@@ -108,7 +108,7 @@ export default function Search() {
               className=" bg-[#e7e8e2] border rounded-full px-4 border-black xl:w-[1300px] mt-4 w-72 h-14"
             />
             <button
-              onClick={handleClick}
+              onClick={callGenerateEndpoint}
               className="mt-5 font-Cinz font-bold bg-[#958f89] p-3 rounded-full xl:hover:scale-125"
             >
               {" "}
